@@ -1,13 +1,22 @@
 # bunce-2018-cross-cultural-competence
 files relating to the 2018 manuscript:
 
-Field experimental evidence for two paths to cross-cultural competence
+Two paths to cross-cultural competence suggest one to cultural sustainability
 
+Steps to reproduce the analysis in this paper:
 
-``Manu_perceptions_11sep18.csv``: comma separated data used in analysis
+1) Create a project folder on your machine. Name it whatever you want.
 
-``Perceptions_analyses_m4m11m19_11sep18.R``: script for fitting the three primary IRT models used in the analysis. Creates all the figures in the manuscript and the appendix.
+2) Inside this project folder, put the file ``RunAll.R``
 
-``Perceptions_analyses_model_tables_11sep18.R``: script for fitting all IRT models used in the analysis. Creates the two tables of model characteristics in the appendix. This script uses the individual Stan code files for each model. Running all models can take several days.
+3) Also inside the project folder, create three sub-folders named (exactly) ``Code``, ``Plots``, and ``Data``
 
-``m1.stan`` - ``m20.stan``: Stan code for each individual IRT model.
+4) Inside the ``Data`` folder, put the file ``Manu_perceptions_11sep18.csv``
+
+5) Inside the ``Code`` folder, put all the other files.
+
+6) Open the file ``RunAll.R``. Inside it, you can set the path to your project folder. Then run its parts in order in R.
+
+All data figures in the manuscript and appendix will appear in the ``Plots`` folder.
+
+It can take several days to run all twenty models in this analysis to convergence. However, you can get pretty good estimates by using two mcmc chains of 1000 samples each, which should only take a few hours. Also, you can produce all the figures using just models m1, m4, m11, and m19. ``RunAll.R`` lets you fit only these models, and modify the number of mcmc chains and samples. 
