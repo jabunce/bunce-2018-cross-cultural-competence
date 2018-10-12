@@ -10,6 +10,7 @@ library(boot)      #for inverse logit function
 library(stargazer) #for table of model outputs
 
 # Set local directory: the path to the folder containing the subfolders Code, Plots, and Data
+#setwd("C:/Users/jabunce/Dropbox/Matsigenka-Mestizo_project_2014/perception_analysis/R_scripts/xcult_comp_analysis_github_4oct18")
 setwd("~/Manu_perceptions")
 
 # Load helper functions

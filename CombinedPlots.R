@@ -93,7 +93,7 @@ names(mean_kl_in_list) <- c("Matsi",
 pdf(file="./Plots/mean_guess_kl_m11m19_dens.pdf", 
 height=7, width=7)
 layout( t(c(1,2,3)), widths=c(1.9,1,1) )
-par(mar = c(0, 0, 0, 0), oma = c(4, 4, 4, 4)) #margins for indiv plot, oma for outer margins (bottom, left, top, right)
+par(mar = c(0, 0, 0, 0), oma = c(5, 4, 4, 4)) #margins for indiv plot, oma for outer margins (bottom, left, top, right)
 
 
 denschart3( rev(mean_ego_list)[1:8],
@@ -109,7 +109,7 @@ denschart3( rev(mean_ego_list)[1:8],
         clip(0.07,1,0,16), #x1, x2, y1, y2	clip at x=0 
         vline=c(0.35,0.5,0.65) 
  )
-text(x=0.5, y=9.85, labels="Ego Responses", cex=1.25)
+#text(x=0.5, y=9.85, labels="Ego Responses", cex=1.25)
 
 text( x=rep(-0.3,8), y=c(1,2,3,4, 6,7,8,9), cex=1.5, adj=0, labels=rev(c("Education", "Labor", "Commerce", "None",
 																		"Community", "Employer", "Family", "None")) )
@@ -119,8 +119,8 @@ par(xpd=NA) #set clipping region to entire device
 lines(x=list( x=c(-0.75,1.5), y=c(5.25,5.25) ), lty=1, lwd=0.75) #horizontal line
 par(xpd=TRUE) #set clipping region to figure region
 
-mtext("Probability", side = 1, outer = TRUE, cex = 0.9, line = 2.2, adj=0.345)
-
+mtext("Probability of holding", side = 1, outer = TRUE, cex = 0.9, line = 2.2, adj=0.315)
+mtext("positive norm", side = 1, outer = TRUE, cex = 0.9, line = 3.2, adj=0.34)
 
 
 denschart3( rev(mean_kl_out_list)[1:8],
@@ -136,7 +136,7 @@ denschart3( rev(mean_kl_out_list)[1:8],
           	clip(0.07,1,0,16), #x1, x2, y1, y2	clip at x=0  
           	vline=c(0.25,0.5,0.75)
  )
-text(x=0.5, y=9.85, labels="Out-Group Guesses", cex=1.25)
+#text(x=0.5, y=9.85, labels="Out-Group Guesses", cex=1.25)
 
 axis(side=1, at=c(0,0.5,1), labels=c(0,0.5,1), cex.axis=1) #bottom
 
@@ -158,16 +158,25 @@ denschart3( rev(mean_kl_in_list)[1:8],
           	clip(0.05,1,0,16), #x1, x2, y1, y2	clip at x=0 
           	vline=c(0.0725,0.15,0.2225) 
  )
-text(x=0.15, y=9.85, labels="In-Group Guesses", cex=1.25)
+#text(x=0.15, y=9.85, labels="In-Group Guesses", cex=1.25)
 
 axis(side=1, at=c(0,0.15,0.3), labels=c(0,0.15,0.3), cex.axis=1) #bottom
 
 
 lines(x=list( x=c(-0.5,0.5), y=c(5.25,5.25) ), lty=1, lwd=0.75) #horizontal line
 
-mtext("Inaccuracy", side = 1, outer = TRUE, cex = 0.9, line = 2.2, adj=0.79)
+#mtext("Inaccuracy", side = 1, outer = TRUE, cex = 0.9, line = 2.2, adj=0.79)
+mtext("Inaccuracy of", side = 1, outer = TRUE, cex = 0.9, line = 2.2, adj=0.65)
+mtext("out-group guesses", side = 1, outer = TRUE, cex = 0.9, line = 3.2, adj=0.662)
+
+mtext("Inaccuracy of", side = 1, outer = TRUE, cex = 0.9, line = 2.2, adj=0.95)
+mtext("in-group guesses", side = 1, outer = TRUE, cex = 0.9, line =3.2, adj=0.985)
+
 mtext("A. Matsigenka", side = 2, outer = TRUE, cex = 1.25, line = 0, adj=0.3, padj=-19.35, las=1)
 mtext("B. Mestizos", side = 2, outer = TRUE, cex = 1.25, line = 0, adj=0.4, padj=0.75, las=1)
+
+mtext("Inter-group Experience", side = 2, outer = TRUE, cex = 0.9, line = 0, adj=0.88, padj=0.75, las=3)
+mtext("Inter-group Experience", side = 2, outer = TRUE, cex = 0.9, line = 0, adj=0.14, padj=0.75, las=3)
 
 graphics.off()
 
@@ -995,7 +1004,7 @@ lines( list( x= c(xmin, xmax),
 lines( list( x=  c(xmin, xmax), 
   y=c(2.25,2.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmax),  
-  y=c(3.25,3.25) ), lwd=4 )
+  y=c(3.25,3.25) ), lwd=4, lend="square" )
 
 rect(xleft=xmin, 
    ybottom=0.2,
@@ -1025,11 +1034,11 @@ axis(side=1, at=c(0.5*xmin,0,0.5*xmax), col="white", col.ticks="black", cex.axis
 lines( list( x= c(xmin, xmax), 
   y=c(1.25,1.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmax),  
-  y=c(2.25,2.25) ), lwd=4 )
+  y=c(2.25,2.25) ), lwd=4, lend="square" )
 lines( list( x= c(xmin, xmax),  c(-0.25,0.25),
   y=c(3.25,3.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmin), 
-  y=c(2.25, 3.25) ), lwd=4 )
+  y=c(2.25, 3.25) ), lwd=4, lend="square" )
 
 rect(xleft=xmin,   
    ybottom=0.2,
@@ -1059,13 +1068,13 @@ axis(side=1, at=c(0.5*xmin,0,0.5*xmax), col="white", col.ticks="black", cex.axis
 
 #abline(v=0)
 lines( list( x= c(xmin, xmax), 
-  y=c(1.25,1.25) ), lwd=4 )
+  y=c(1.25,1.25) ), lwd=4, lend="square" )
 lines( list( x= c(xmin, xmax),  
   y=c(2.25,2.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmax),  
   y=c(3.25,3.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmin), 
-  y=c(1.25, 2.25) ), lwd=4 )
+  y=c(1.25, 2.25) ), lwd=4, lend="square" )
 
 rect(xleft=xmin,   
    ybottom=0.2,
@@ -1115,7 +1124,7 @@ text(labels="In-Group Guesses", x=-1*xrange,
   y=-0.8, cex=1.5) #bottom
 
 
-mtext("A. Matsigenka", side=3, line=4, cex=1.5, adj=-0.45) #side: 1=bottom, 2=left, 3=top, 4=right
+mtext("A. Matsigenka Inaccuracy Contrasts", side=3, line=4, cex=1.5, adj=1.5) #side: 1=bottom, 2=left, 3=top, 4=right
 
 #graphics.off()
 
@@ -1249,7 +1258,7 @@ lines( list( x= c(xmin, xmax),
 lines( list( x=  c(xmin, xmax), 
   y=c(2.25,2.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmax),  
-  y=c(3.25,3.25) ), lwd=4 )
+  y=c(3.25,3.25) ), lwd=4, lend="square" )
 
 rect(xleft=xmin, 
    ybottom=0.2,
@@ -1279,11 +1288,11 @@ axis(side=1, at=c(0.5*xmin,0,0.5*xmax), col="white", col.ticks="black", cex.axis
 lines( list( x= c(xmin, xmax), 
   y=c(1.25,1.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmax),  
-  y=c(2.25,2.25) ), lwd=4 )
+  y=c(2.25,2.25) ), lwd=4, lend="square" )
 lines( list( x= c(xmin, xmax),  c(-0.25,0.25),
   y=c(3.25,3.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmin), 
-  y=c(2.25, 3.25) ), lwd=4 )
+  y=c(2.25, 3.25) ), lwd=4, lend="square" )
 
 rect(xleft=xmin,   
    ybottom=0.2,
@@ -1313,13 +1322,13 @@ axis(side=1, at=c(0.5*xmin,0,0.5*xmax), col="white", col.ticks="black", cex.axis
 
 
 lines( list( x= c(xmin, xmax), 
-  y=c(1.25,1.25) ), lwd=4 )
+  y=c(1.25,1.25) ), lwd=4, lend="square" )
 lines( list( x= c(xmin, xmax),  
   y=c(2.25,2.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmax),  
   y=c(3.25,3.25) ), lwd=0.5 )
 lines( list( x= c(xmin, xmin), 
-  y=c(1.25, 2.25) ), lwd=4 )
+  y=c(1.25, 2.25) ), lwd=4, lend="square" )
 
 rect(xleft=xmin,   
    ybottom=0.2,
@@ -1368,7 +1377,7 @@ text(labels="In-Group Guesses", x=-1*xrange,
   y=-0.8, cex=1.5) #bottom
 
 
-mtext("B. Mestizos", side=3, line=4, cex=1.5, adj=-0.4) #side: 1=bottom, 2=left, 3=top, 4=right
+mtext("B. Mestizo Inaccuracy Contrasts", side=3, line=4, cex=1.5, adj=5.8) #side: 1=bottom, 2=left, 3=top, 4=right
 
 graphics.off()
 

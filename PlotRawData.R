@@ -13,7 +13,7 @@ props_e <- data.frame(
 
 colnames(props_e)[c(1:3)] <- c("Quest", "mach_yes", "mest_yes")
 
-props_e <- cbind(props_e, quest_names)
+props_e <- cbind(props_e, quest_names.e)
 #print(props_e, digits=2)
 
 props.e <- props_e[order(props_e$mach_yes),] #reorder by machi percentage
@@ -32,7 +32,7 @@ props_o <- data.frame(
 
 colnames(props_o)[c(1:3)] <- c("Quest", "mach_yes", "mest_yes")
 
-props_o <- cbind(props_o, quest_names)
+props_o <- cbind(props_o, quest_names.o)
 #print(props_o, digits=2)
 
 
@@ -54,7 +54,7 @@ props_i <- data.frame(
 
 colnames(props_i)[c(1:3)] <- c("Quest", "mach_yes", "mest_yes")
 
-props_i <- cbind(props_i, quest_names)
+props_i <- cbind(props_i, quest_names.i)
 #print(props_i, digits=2)
 
 props.i <- props_i[order(props_i$mach_yes),] #reorder by machi percentage

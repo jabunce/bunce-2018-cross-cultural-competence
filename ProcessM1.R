@@ -368,10 +368,6 @@ names(all.o)[12:17] <- c("abils.e","lowers.e","uppers.e","abils.i","lowers.i","u
 
 
 
-
-
-
-
 ####################### individual ego location highlights 
 
 #sort by response abils
