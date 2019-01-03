@@ -3,6 +3,9 @@ files relating to the 2018 manuscript:
 
 Two paths to cross-cultural competence, and one to cultural sustainability
 
+The original preprint is on SocArXiv [here](https://osf.io/preprints/socarxiv/468ns/)
+
+
 Steps to reproduce the analysis in this paper:
 
 1) Create a project folder on your machine. Name it whatever you want.
