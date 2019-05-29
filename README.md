@@ -1,7 +1,7 @@
 # bunce-2018-cross-cultural-competence
 files relating to the 2018 manuscript:
 
-Two paths to cross-cultural competence, and one to cultural sustainability
+ Field evidence for two paths to cross-cultural competence: implications for cultural dynamics
 
 The original preprint is on SocArXiv [here](https://osf.io/preprints/socarxiv/468ns/)
 
