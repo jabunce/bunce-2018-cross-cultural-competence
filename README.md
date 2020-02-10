@@ -1,7 +1,8 @@
 # bunce-2018-cross-cultural-competence
-files relating to the 2018 manuscript:
+files relating to the manuscript:
 
- Field evidence for two paths to cross-cultural competence: implications for cultural dynamics
+Bunce JA (2020). Field evidence for two paths to cross-cultural competence: implications for cultural
+dynamics. Evolutionary Human Sciences 2(e3):1–16. https://doi.org/10.1017/ehs.2020.1
 
 The original preprint is on SocArXiv [here](https://osf.io/preprints/socarxiv/468ns/)
 
