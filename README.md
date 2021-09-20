@@ -24,3 +24,6 @@ Steps to reproduce the analysis in this paper:
 All data-dependent figures in the manuscript and appendix will appear in the ``Plots`` folder.
 
 It can take several days to run all twenty models in this analysis to convergence. However, you can get pretty good estimates by using two mcmc chains of 1000 samples each, which should only take a few hours. Also, you can produce all the figures using just models m1, m4, m11, and m19. ``RunAll.R`` lets you fit only these models, and modify the number of mcmc chains and samples. 
+
+
+Empirical data included here is provided so that other researchers can check the analyses in the associated manuscript. These data shall not be used for any other purpose unless express permission is granted by John Bunce (john_bunce@eva.mpg.de).
